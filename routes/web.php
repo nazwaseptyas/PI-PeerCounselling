@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,12 +32,7 @@ Route::get('/detail', function () {
 Route::get('/kontak', function () {
     return view('kontak');
 });
-Route::get('/login', function () {
-    return view('login');
-});
-Route::get('/register', function () {
-    return view('register');
-});
+
 Route::get('/admin', function () {
     return view('admin');
 });
@@ -46,3 +42,11 @@ Route::get('/tabelartikel', function () {
 Route::get('/tabelkonsultasi', function () {
     return view('tabelkonsultasi');
 });
+
+Route::get('/register', [LoginController::class, 'register'])->name('register');
+Route::post('/registeruser', [LoginController::class, 'registeruser'])->name('registeruser');
+
+Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/loginuser', [LoginController::class, 'loginuser'])->name('loginuser');
+
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');

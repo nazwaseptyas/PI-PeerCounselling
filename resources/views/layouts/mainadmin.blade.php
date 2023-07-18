@@ -41,7 +41,6 @@
                 </div>
 
                 <div class="d-flex">
-
                     <div class="dropdown d-inline-block">
                         <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -52,18 +51,16 @@
                         </button>
                         <div class="dropdown-menu dropdown-menu-end">
                             <!-- item-->
-                            <a class="dropdown-item" href="#"><i
+                            <a class="dropdown-item" href="/logout"><i
                                     class="uil uil-sign-out-alt font-size-18 align-middle me-1 text-muted"></i> <span
                                     class="align-middle">Keluar</span></a>
                         </div>
                     </div>
-
                     <div class="dropdown d-inline-block">
                         <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
                             <i class="uil-cog"></i>
                         </button>
                     </div>
-
                 </div>
             </div>
         </header>

@@ -61,22 +61,38 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3">
+                    @if(Auth::check())
+                    <div class="dropdown d-inline-block ms-auto">
+                        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style="margin-left: 90px;">
+                            <img src="assets/img/icon/user.svg" alt="User Icon"
+                                style="margin-right: 10px; width:20px;" />
+                            Halo, {{ Auth::user()->name }}
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item" href="/logout" style="color: #36b65e;">Keluar</a>
+                            </li>
+                        </ul>
+                    </div>
+                    @else
                     <div class="header-right d-none d-lg-block">
                         <div class="header-button f-right">
-                            <a href="/login" class="c-btn">
-                                Masuk
-                            </a>
+                            <a href="/login" class="c-btn">Masuk</a>
                         </div>
                         <div class="header-button f-right">
-                            <a href="/register" class="c-btn">
-                                Daftar
-                            </a>
+                            <a href="/register" class="c-btn">Daftar</a>
                         </div>
                     </div>
+                    @endif
                     <div class="col-12">
                         <div class="mobile-menu"></div>
                     </div>
                 </div>
+
+
+
             </div>
     </header>
     <main>@yield('container')</main>
