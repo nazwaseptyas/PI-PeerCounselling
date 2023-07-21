@@ -86,11 +86,24 @@
                 <div id="sidebar-menu">
                     <!-- Left Menu Start -->
                     <ul class="metismenu list-unstyled" id="side-menu">
-                        <li class="menu-title">Menu</li>
+                        
+                        <li class="menu-title">Dashboard Admin</li>
                         <li>
                             <a href="/admin">
                                 <i class="uil-home-alt"></i>
-                                <span>Dashboard</span>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/tabelartikel">
+                                <i class="uil-home-alt"></i>
+                                <span>Artikel</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/tabelkonsultasi">
+                                <i class="uil-home-alt"></i>
+                                <span>Konsultasi</span>
                             </a>
                         </li>
                     </ul>

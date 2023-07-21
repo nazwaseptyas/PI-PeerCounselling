@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo/logoyukcerita.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://imgur.com/Z7nGGVk.png" />
 
     <!-- CSS here -->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
