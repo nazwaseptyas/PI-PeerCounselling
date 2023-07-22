@@ -11,12 +11,12 @@ class ArtikelController extends Controller
 {
     public function indexxx()
     {
-        $data = Artikel::all();
+        $data = Artikel::paginate(3);
         return view('artikel', compact('data'));
     }
     public function indexxxx()
     {
-        $data = Artikel::all();
+        $data = Artikel::paginate(3);
         return view('tabelartikel', compact('data'));
     }
 
@@ -69,6 +69,19 @@ class ArtikelController extends Controller
         $data = Artikel::find($id);
         return view('tampilkandata', ['data' => $data]);
     }
+    public function search(Request $request)
+{
+    $keyword = $request->input('q');
+
+    // Lakukan pencarian berdasarkan judul artikel
+    $data = Artikel::where('judul', 'LIKE', '%' . $keyword . '%')->get();
+
+    // Debugging untuk memastikan data hasil pencarian
+    // dd($data);
+
+    return view('search', compact('data', 'keyword'));
+}
+
     // Contoh di dalam controller untuk halaman /detail/{id}
 
 }

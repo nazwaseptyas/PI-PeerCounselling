@@ -43,42 +43,48 @@
                         </div>
                     </div>
                     @endforeach
+                    <!-- Tampilkan link pagination -->
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="basic-pagination mt-20 basic-pagination-2">
+                                    <ul>
+                                        @if ($data->onFirstPage())
+                                            <li class="disabled"><a href="#"><i class="far fa-angle-left"></i></a></li>
+                                        @else
+                                            <li><a href="{{ $data->previousPageUrl() }}"><i class="far fa-angle-left"></i></a></li>
+                                        @endif
+
+                                        @foreach ($data as $page)
+                                            @if ($page->url)
+                                                <li class="{{ $page->isActive ? 'active' : '' }}"><a href="{{ $page->url }}">{{ $page->label }}</a></li>
+                                            @else
+                                                <li class="disabled">{{ $page->label }}</li>
+                                            @endif
+                                        @endforeach
+
+                                        @if ($data->hasMorePages())
+                                            <li><a href="{{ $data->nextPageUrl() }}"><i class="far fa-angle-right"></i></a></li>
+                                        @else
+                                            <li class="disabled"><a href="#"><i class="far fa-angle-right"></i></a></li>
+                                        @endif
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
                     @else
                         <p>Tidak ada data artikel yang ditampilkan.</p>
                     @endif
                 </div>
                 <div class="col-xl-4 col-lg-4 mb-30">
                     <div class="widget mb-40">
-                        <form class="search-form">
-                            <input type="text" placeholder="Cari" />
-                            <button type="submit">
-                                <i class="fas fa-search"></i>
-                            </button>
+                        <form action="{{ route('search') }}" method="GET" class="search-form">
+                            <input type="text" name="q" placeholder="cari artikel">
+                            <button type="submit" class="c-btn" style="height:40px; width: 30px; margin-right:10px;"><i class="fas fa-search"></i></button>
                         </form>
+
                     </div>
-                    <div class="widget mb-40">
-                        <h3 class="widget-title">Kategori</h3>
-                        <ul class="service-list">
-                            <li>
-                                <a href="/detail">Semua Kategori</a>
-                            </li>
-                            <li>
-                                <a href="/detail">Industri dan Organisasi</a>
-                            </li>
-                            <li>
-                                <a href="/detail">Karir</a>
-                            </li>
-                            <li>
-                                <a href="/detail">Keluarga</a>
-                            </li>
-                            <li>
-                                <a href="/detail">Masalah Diri</a>
-                            </li>
-                            <li>
-                                <a href="/detail">Trauma</a>
-                            </li>
-                        </ul>
-                    </div>
+                    
                 </div>
             </div>
         </div>

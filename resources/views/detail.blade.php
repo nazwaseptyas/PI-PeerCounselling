@@ -19,7 +19,7 @@
                                         {{ $data->tanggal }}
                                     </span>
                                     <span>
-                                        <i class="far fa-calendar-alt"></i>
+                                        <i class="far fa-user"></i>
                                         {{ $data->penulis }}
                                     </span>
                                 </div>
@@ -34,36 +34,12 @@
                     </div>
                     <div class="col-xl-4 col-lg-4 mb-30">
                         <div class="widget mb-40">
-                            <form class="search-form">
-                                <input type="text" placeholder="Cari" />
-                                <button type="submit">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </form>
+                             <form action="{{ route('search') }}" method="GET" class="search-form">
+                            <input type="text" name="q" placeholder="cari artikel">
+                            <button type="submit" class="c-btn" style="height:40px; width: 30px; margin-right:10px;"><i class="fas fa-search"></i></button>
+                        </form>
                         </div>
-                        <div class="widget mb-40">
-                            <h3 class="widget-title">Kategori</h3>
-                            <ul class="service-list">
-                                <li>
-                                    <a href="/detail">Semua Kategori </a>
-                                </li>
-                                <li>
-                                    <a href="/detail">Industri dan Organisasi </a>
-                                </li>
-                                <li>
-                                    <a href="/detail">Karir </a>
-                                </li>
-                                <li>
-                                    <a href="/detail">Keluarga </a>
-                                </li>
-                                <li>
-                                    <a href="/detail">Masalah Diri </a>
-                                </li>
-                                <li>
-                                    <a href="/detail">Trauma </a>
-                                </li>
-                            </ul>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

@@ -75,3 +75,4 @@ Route::post('/simpanartikel', [ArtikelController::class, 'simpanArtikel'])->name
 Route::get('/tampilkandata/{id}', [ArtikelController::class, 'tampilkandata'])->name('tampilkandata');
 Route::get('/delete/{id}', [ArtikelController::class, 'delete'])->name('delete');
 Route::get('/detail/{id}', [ArtikelController::class, 'detail'])->name('detail');
+Route::get('/search', [ArtikelController::class, 'search'])->name('search');
