@@ -11,7 +11,7 @@
                     <span aria-hidden="True" style="color:#36b65e">&times;</span>
                 </button>
                 <div class="row">
-                    <p style="font-size: 14px; font-family:'Poppins',sans-serif;" class="mb-0 font-weight-light"><i class="fal fa-check-circle" style="color: #36b65e"></i><b class="mr-1">&nbsp;Success!</b>Data Konsultasi Berhasil Ditambahkan, Silahkan Cek Data Anda!</p>
+                    <p style="font-size: 14px; font-family:'Poppins',sans-serif;" class="mb-0 font-weight-light"><i class="fal fa-check-circle" style="color: #36b65e"></i><b class="mr-1">&nbsp;Success!</b>Data Konsultasi Berhasil Ditambahkan, Silahkan Cek Data Anda! Untuk Konsultasi akan kami hubungi melalui Whatsapp.</p>
                 </div>
             </div>
             @endif
@@ -56,7 +56,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-12">
                                     <div class="contacts-icon contactss-phone">
-                                        <input name="nohp" type="text" placeholder="Masukkan Nomor Telepon" />
+                                        <input name="nohp" type="text" placeholder="Masukkan Nomor Whatsapp" />
                                     </div>
                                 </div>
                                 {{-- <div class="col-lg-12">
