@@ -2,7 +2,21 @@
 
 @section('container')
 <main>
+    
     <div class="contact-us-area pt-120 pb-120">
+        <div class="col-xl-6 col-lg-6 d-flex justify-content-center">
+            @if ($message = Session::get('success'))
+            <div class="alert alert-success shadow" role="alert" style="border-left:#36b65e 5px solid; border-radius: 10px; width:500px;">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="True" style="color:#36b65e">&times;</span>
+                </button>
+                <div class="row">
+                    <p style="font-size: 14px; font-family:'Poppins',sans-serif;" class="mb-0 font-weight-light"><i class="fal fa-check-circle" style="color: #36b65e"></i><b class="mr-1">&nbsp;Success!</b>Data Konsultasi Berhasil Ditambahkan, Silahkan Cek Data Anda!</p>
+                </div>
+            </div>
+            @endif
+        </div>
+
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-6">
@@ -20,6 +34,8 @@
                 <div class="col-xl-12">
                     <div class="contacts-us-wrapper theme-green">
                         <form id="contacts-us-form" class="contacts-us-form" action="{{ route('createdata') }}" method="post" enctype="multipart/form-data">
+                        <form id="contacts-us-form" class="contacts-us-form" action="/konfirm" method="post" enctype="multipart/form-data">
+                        
                             @csrf
                             <div class="row">
                                 <div class="col-lg-6 col-md-12">
@@ -70,10 +86,47 @@
                                 </div>
                             </div>
                         </form>
+
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
+     
+    <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="section-title text-center mb-60">
+                        <span>
+                            <i class="far fa-plus"></i> Data Konsultasi
+                            <i class="far fa-plus pl-10"></i>
+                            <br>
+                        </span>
+                       <h2 style="font-size: 24px; font-family:'Poppins',sans-serif;">Cek Data Anda Apabila Sudah Mendaftar Konsultasi</h2>
+                       <br>
+                       <div class="app-item">
+                                <ul>
+                                    <li>
+                                        <div class="app-text">
+                                            <h4>Senin - Jum'at</h4>
+                                            <span>9:00 - 20:00</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="app-text">
+                                            <h4>Sabtu &amp; Minggu</h4>
+                                            <span>10:00 - 19:00</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                    
+                     <li>
+                            <a href="/konfirm" class="c-btn" style="margin-bottom: 30px;">Lihat Data Konsultasi</a>
+                        </li>
+                </div>
+            </div>
+                       
 </main>
 @endsection

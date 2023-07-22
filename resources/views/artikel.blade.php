@@ -71,7 +71,6 @@
                                 </div>
                             </div>
                         </div>
-
                     @else
                         <p>Tidak ada data artikel yang ditampilkan.</p>
                     @endif
@@ -79,7 +78,7 @@
                 <div class="col-xl-4 col-lg-4 mb-30">
                     <div class="widget mb-40">
                         <form action="{{ route('search') }}" method="GET" class="search-form">
-                            <input type="text" name="q" placeholder="cari artikel">
+                            <input type="text" name="q" placeholder="Cari artikel">
                             <button type="submit" class="c-btn" style="height:40px; width: 30px; margin-right:10px;"><i class="fas fa-search"></i></button>
                         </form>
 

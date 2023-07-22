@@ -6065,6 +6065,7 @@ a .sup-text span {
     font-size: 18px;
     color: #282828;
     font-weight: 600;
+    border-radius: 10px;
 }
 
 .search-form input::-moz-placeholder {

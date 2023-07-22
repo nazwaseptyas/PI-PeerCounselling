@@ -7,9 +7,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-6">
                     <div class="section-title text-center mb-60">
-                        <span>
-                            Data Konsultasi
-                        </span>
+                        <h2 style="font-size: 36px;">Data Konsultasi</h2>
                     </div>
                 </div>
             </div>

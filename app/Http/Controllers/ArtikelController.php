@@ -82,6 +82,4 @@ class ArtikelController extends Controller
     return view('search', compact('data', 'keyword'));
 }
 
-    // Contoh di dalam controller untuk halaman /detail/{id}
-
 }

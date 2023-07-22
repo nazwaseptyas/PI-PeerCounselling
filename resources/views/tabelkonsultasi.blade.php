@@ -42,7 +42,7 @@
                                     <td>{{ $row->created_at->format('D M Y') }}</td>
                                     <td>
                                         <a href="/tampilkandata/{{ $row->id }}" class="btn btn-info">Edit</a>
-                                        <a href="/delete/{{ $row->id }}"  class="btn btn-danger">Delete</a>
+                                        <a href="/delete-consultation/{{ $row->id }}"  class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>
                                 @endforeach
@@ -53,5 +53,29 @@
             </div>
         </div>
     </main>
+    <script>
+    // Fungsi untuk mengirimkan permintaan DELETE
+    function deleteConsultation(id) {
+        if (confirm('Apakah Anda yakin ingin menghapus data konsultasi ini?')) {
+            fetch(`/delete-consultation/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Refresh halaman setelah berhasil menghapus data
+                    window.location.reload();
+                } else {
+                    alert('Gagal menghapus data konsultasi.');
+                }
+            }).catch(error => {
+                console.error('Terjadi kesalahan:', error);
+                alert('Terjadi kesalahan saat menghapus data konsultasi.');
+            });
+        }
+    }
+</script>
+
 </body>
 @endsection
