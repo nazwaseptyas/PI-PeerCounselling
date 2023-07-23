@@ -7,13 +7,14 @@
     <title>Yuk Cerita</title>
     <link rel="shortcut icon" href="/assets/img/logo/logoyukcerita.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/form.css"/>
 </head>
 <body>
 <main>
     <div class="page-content" style="font-family: 'Poppins', sans-serif;">
         <div class="container-fluid">
             <div class="container">
-                <h2 style="font-size: 36px; font-weight:bolder; margin-top: 50px; margin-bottom: 50px; text-align:center;">Edit Data Konsultasi</h2>
+                <h2 style="font-size: 36px; font-weight:bolder; margin-top: 50px; text-align:center;">Edit Artikel</h2>
                 <form action="{{ route('updateartikel', ['id' => $data->id]) }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
@@ -36,6 +37,7 @@
                         <label for="gambar" class="form-label">Gambar</label>
                         <input type="file" name="gambar" value="{{ $data->gambar }}"class="form-control" id="gambar" aria-describedby="emailHelp">
                     </div>
+                    <br>
                     <div style="margin-top: 10px;">
                         <label class="form-label">Gambar Saat Ini</label>
                         <img src="{{ asset('storage/' . $data->gambar) }}" alt="{{ $data->judul }}" style="max-width: 100px;">

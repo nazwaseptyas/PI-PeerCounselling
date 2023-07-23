@@ -26,7 +26,11 @@
                         </a>
                     </div>
                 </div>
+                <br>
                 <div class="col-xl-6 col-lg-6">
+                    <div class="col-12">
+                        <div class="mobile-menu"></div>
+                    </div>
                     <div class="main-menu">
                         <nav id="mobile-menu">
                             <ul>
@@ -45,7 +49,6 @@
                                 <li>
                                     <a href="/kontak">Kontak</a>
                                 </li>
-                                
                             </ul>
                         </nav>
                     </div>
@@ -68,7 +71,7 @@
                         </ul>
                     </div>
                     @else
-                    <div class="header-right d-none d-lg-block">
+                    <div class="header-right">
                         <div class="header-button f-right">
                             <a href="/login" class="c-btn">Masuk</a>
                         </div>
@@ -77,10 +80,9 @@
                         </div>
                     </div>
                     @endif
-                    <div class="col-12">
-                        <div class="mobile-menu"></div>
-                    </div>
+                    
                 </div>
+                
             </div>
     </header>
     {{-- Main Content --}}
