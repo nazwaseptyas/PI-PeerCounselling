@@ -1,5 +1,4 @@
 @extends('layouts/mainadmin')
-
 @section('container')
 <body>
     <main>
@@ -7,11 +6,13 @@
             <div class="container-fluid">
                 <div class="container">
                     <div class="row">
+                        {{-- Alert --}}
                         @if ($message = Session::get('success'))
                         <div class="alert alert-success" role="alert">
                             {{ $message }}
                         </div>
                         @endif
+                        {{-- Tabel Konsultasi --}}
                         <table class="table">
                             <thead>
                                 <tr>
@@ -53,8 +54,8 @@
             </div>
         </div>
     </main>
+    {{-- Fungsi Delete --}}
     <script>
-    // Fungsi untuk mengirimkan permintaan DELETE
     function deleteConsultation(id) {
         if (confirm('Apakah Anda yakin ingin menghapus data konsultasi ini?')) {
             fetch(`/delete-consultation/${id}`, {
@@ -76,6 +77,5 @@
         }
     }
 </script>
-
 </body>
 @endsection

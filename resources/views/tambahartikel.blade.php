@@ -1,5 +1,4 @@
 @extends('layouts/mainadmin')
-
 @section('container')
 <main>
     <div class="page-content">

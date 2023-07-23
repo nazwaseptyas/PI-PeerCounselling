@@ -17,8 +17,8 @@ class Konsultasi extends Model
         return self::create($data);
     }
    public function user(): BelongsTo
-{
+    {
     return $this->belongsTo(User::class, 'id', 'id');
-}
+    }
 
 }

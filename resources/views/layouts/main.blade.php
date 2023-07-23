@@ -1,32 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
-    <!-- <meta http-equiv="x-ua-compatible" content="ie=edge" /> -->
     <title>Yuk Cerita</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <link rel="shortcut icon" type="image/x-icon" href="https://imgur.com/Z7nGGVk.png" />
-
-    <!-- CSS here -->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="/assets/css/animate.min.css" />
-    <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
     <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" />
-    <link rel="stylesheet" href="/assets/css/themify-icons.css" />
     <link rel="stylesheet" href="/assets/css/meanmenu.css" />
-    <link rel="stylesheet" href="/assets/css/slick.css" />
-    <link rel="stylesheet" href="https://devsnews.com/template/mindpress/mindpress/assets/css/default.css/" />
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
 </head>
-
 <body>
+    {{-- Navbar --}}
     <header>
         <div class="container-fluid">
             <div class="row align-items-center">
@@ -42,10 +31,10 @@
                         <nav id="mobile-menu">
                             <ul>
                                 <li>
-                                    <a href="/">Home</a>
+                                    <a href="/">Beranda</a>
                                 </li>
                                 <li>
-                                    <a href="/about">About</a>
+                                    <a href="/about">Tentang Kami</a>
                                 </li>
                                 <li>
                                     <a href="/konsultasi">Konsultasi</a>
@@ -54,13 +43,14 @@
                                     <a href="/artikel">Artikel</a>
                                 </li>
                                 <li>
-                                    <a href="/kontak">Contact</a>
+                                    <a href="/kontak">Kontak</a>
                                 </li>
                                 
                             </ul>
                         </nav>
                     </div>
                 </div>
+                {{-- Login, Register, Logout --}}
                 <div class="col-xl-3 col-lg-3">
                     @if(Auth::check())
                     <div class="dropdown d-inline-block ms-auto">
@@ -91,12 +81,11 @@
                         <div class="mobile-menu"></div>
                     </div>
                 </div>
-
-
-
             </div>
     </header>
+    {{-- Main Content --}}
     <main>@yield('container')</main>
+    {{-- Footer --}}
     <footer class="footer-style footer-04-style">
         <div class="footer-top-area pt-100 pb-70">
             <div class="container">
@@ -118,14 +107,14 @@
                     </div>
                     <div class="col-xl-3 col-lg-6 col-md-6 mb-30">
                         <div class="footer-wrapper ml-15">
-                            <h3 class="footer-title">Features</h3>
+                            <h3 class="footer-title">Fitur</h3>
                             <div class="footer-link">
                                 <ul>
                                     <li>
-                                        <a href="/">Home</a>
+                                        <a href="/">Beranda</a>
                                     </li>
                                     <li>
-                                        <a href="/about">About</a>
+                                        <a href="/about">Tentang Kami</a>
                                     </li>
                                     <li>
                                         <a href="/konsultasi">Konsultasi</a>
@@ -134,7 +123,7 @@
                                         <a href="/artikel">Artikel</a>
                                     </li>
                                     <li>
-                                        <a href="/kontak">Contact</a>
+                                        <a href="/kontak">Kontak</a>
                                     </li>
                                 </ul>
                             </div>
@@ -142,7 +131,7 @@
                     </div>
                     <div class="col-xl-3 col-lg-6 col-md-6 mb-30">
                         <div class="footer-wrapper">
-                            <h3 class="footer-title">Contact Us</h3>
+                            <h3 class="footer-title">Kontak Kami</h3>
                             <ul class="footer-address">
                                 <li>
                                     <div class="footer-address-icon f-left">
@@ -215,19 +204,19 @@
                         <div class="copyright">
                             <p>
                                 Copyright <i class="far fa-copyright"></i> 2023 Yuk
-                                Cerita. All rights reserved.
+                                Cerita.
                             </p>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-6">
                         <div class="footer-btom-icon text-md-right">
-                            <a href="#">
+                            <a href="/">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                             <a href="https://twitter.com/nzwasalsa_">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="#">
+                            <a href="/">
                                 <i class="fab fa-youtube"></i>
                             </a>
                             <a href="https://www.linkedin.com/in/nazwaseptyas/">
@@ -239,30 +228,15 @@
             </div>
         </div>
     </footer>
-
-    <script data-cfasync="false" src="/assets/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="/assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="/assets/js/popper.min.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
-    <script src="/assets/js/owl.carousel.min.js"></script>
-    <script src="/assets/js/isotope.pkgd.min.js"></script>
-    <script src="/assets/js/slick.min.js"></script>
-    <script src="/assets/js/jquery.meanmenu.min.js"></script>
-    <script src="/assets/js/ajax-form.js"></script>
-    <script src="/assets/js/wow.min.js"></script>
-    <script src="/assets/js/jquery.knob.js"></script>
-    <script src="/assets/js/jquery.appear.js"></script>
-    <script src="/assets/js/waypoints.min.js"></script>
     <script src="/assets/js/jquery.counterup.min.js"></script>
     <script src="/assets/js/jquery.scrollUp.min.js"></script>
-    <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/assets/js/jquery.meanmenu.min.js"></script>
     <script src="/assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="/assets/js/plugins.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.appear.js"></script>
     <script src="/assets/js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
     </script>
 </body>
-
 </html>

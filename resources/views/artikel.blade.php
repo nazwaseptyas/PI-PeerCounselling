@@ -1,10 +1,9 @@
 @extends('layouts/main')
-
 @section('container')
-
 <main>
     <div class="blog-area pt-120 pb-90">
         <div class="container">
+            {{-- Isi Artikel --}}
             <div class="row">
                 <div class="col-xl-8 col-lg-8 mb-30">
                     @php
@@ -43,7 +42,7 @@
                         </div>
                     </div>
                     @endforeach
-                    <!-- Tampilkan link pagination -->
+                    {{-- Pagination --}}
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="basic-pagination mt-20 basic-pagination-2">
@@ -75,19 +74,17 @@
                         <p>Tidak ada data artikel yang ditampilkan.</p>
                     @endif
                 </div>
+               {{-- Cari Artikel --}}
                 <div class="col-xl-4 col-lg-4 mb-30">
                     <div class="widget mb-40">
                         <form action="{{ route('search') }}" method="GET" class="search-form">
                             <input type="text" name="q" placeholder="Cari artikel">
                             <button type="submit" class="c-btn" style="height:40px; width: 30px; margin-right:10px;"><i class="fas fa-search"></i></button>
                         </form>
-
                     </div>
-                    
                 </div>
             </div>
         </div>
     </div>
-
 </main>
 @endsection

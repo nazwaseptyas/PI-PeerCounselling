@@ -1,5 +1,4 @@
 @extends('layouts/main')
-
 @section('container')
 <main>
     <div class="contact-us-area pt-120 pb-120">
@@ -11,6 +10,7 @@
                     </div>
                 </div>
             </div>
+            {{-- Tabel Konsultasi --}}
             <div class="page-content">
             <div class="container-fluid">
                 <div class="container">
@@ -57,11 +57,8 @@
                         <a href="{{ route('konsultasi') }}" class="c-btn">Kembali ke Form Konsultasi</a>
                     </div>
                 </div>
-            </div>
-            
+            </div>   
         </div>
-    </div>
-    </main>
-            
+    </div>         
 </main>
 @endsection

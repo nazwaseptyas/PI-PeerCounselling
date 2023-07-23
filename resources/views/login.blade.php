@@ -1,7 +1,5 @@
 @extends('layouts/main')
-
 @section('container')
-
 <body>
     <main>
         <form action="/loginuser" method="post" class="form-login">
@@ -31,7 +29,6 @@
             <button class="submit" type="submit">
                 Masuk
             </button>
-
             <p class="signup-link">
                 Tidak punya akun?
                 <a href="/register">Daftar</a>

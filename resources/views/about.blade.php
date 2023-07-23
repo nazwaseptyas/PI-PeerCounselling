@@ -1,10 +1,9 @@
 @extends('layouts/main')
-
 @section('container')
-
 <body>
     <main>
-        <div class="about-area pt-120 pb-90" style="background-color: #F6FBF4">
+        {{-- Hero - About --}}
+        <div class="about-area pt-120 pb-90" style="background-color: #F6FBF4; margin-bottom:150px;">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 col-lg-5">
@@ -29,28 +28,19 @@
                                     Bergabunglah dengan komunitas YukCerita dan mulailah mengatasi masalah Anda secara
                                     efektif dan percaya diri!
                                 </p>
-                                <div class="mb-40"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <div class="about-area pb-90">
+        {{-- Konselor --}}
+        <div class="about-area pb-90" style="margin-bottom: 130px;">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="about-img pos-rel mb-30">
                             <img src="assets/img/about/drjara.jpg" alt="" />
-                            {{-- <a href="/kontak" class="download-btn">
-                                <i class="fal fa-clouds"></i> Download Cv
-                            </a> --}}
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-4 col-md-6">
@@ -78,18 +68,11 @@
                                 Kami berkomitmen untuk menawarkan dukungan empatik dan mendengarkan aktif kepada setiap individu yang mencari bantuan, sehingga mereka merasa didengar dan dihargai. Selain itu, kami berusaha menghubungkan individu dengan rekan sebaya dan ahli terlatih yang memberikan panduan, saran, dan dukungan dalam mengatasi masalah mereka. Kami juga berupaya memberikan informasi tentang kesehatan mental dan teknik pengelolaan stres untuk meningkatkan pemahaman dan keterampilan individu dalam merawat diri sendiri. Melalui upaya edukatif kami, kami berharap dapat menghilangkan stigma seputar isu-isu kesehatan mental dan psikologi, serta mendorong kesadaran akan pentingnya mencari bantuan ketika dibutuhkan.
                             </p>
                         </div>
-                        <div class="ab-mission mb-30">
-                            
-                            
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
+        {{-- Jadwal Kerja --}}
         <div class="appointment-area pb-70">
             <div class="container">
                 <div class="row no-gutters">
@@ -128,7 +111,6 @@
                 </div>
             </div>
         </div>
-
     </main>
 </body>
 @endsection

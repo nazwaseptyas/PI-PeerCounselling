@@ -1,14 +1,12 @@
-<!-- search_results.blade.php -->
 @extends('layouts/main')
-
 @section('container')
-
 <main>
     <div class="blog-area pt-120 pb-90" style="font-family: 'Poppins', sans-serif;">
         <div class="container">
             <div class="row">
                 <div class="col-xl-8 col-lg-8 mb-30">
                     <h2 style="margin-bottom: 50px; text-align:center;">Hasil Pencarian untuk: "{{ $keyword }}"</h2>
+                    {{-- Artikel --}}
                     @if ($data && $data->count() > 0)
                         @foreach ($data as $row)
                             <div class="blog-wrapper blog-standard mb-50">
@@ -48,5 +46,4 @@
         </div>
     </div>
 </main>
-
 @endsection

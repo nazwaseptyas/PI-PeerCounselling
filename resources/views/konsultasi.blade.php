@@ -1,9 +1,8 @@
 @extends('layouts/main')
-
 @section('container')
 <main>
-    
     <div class="contact-us-area pt-120 pb-120">
+        {{-- Alert Berhasil Input Data Konsultasi --}}
         <div class="col-xl-6 col-lg-6 d-flex justify-content-center">
             @if ($message = Session::get('success'))
             <div class="alert alert-success shadow" role="alert" style="border-left:#36b65e 5px solid; border-radius: 10px; width:500px;">
@@ -16,7 +15,7 @@
             </div>
             @endif
         </div>
-
+        {{-- Form Konsultasi --}}
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-6">
@@ -59,13 +58,6 @@
                                         <input name="nohp" type="text" placeholder="Masukkan Nomor Whatsapp" />
                                     </div>
                                 </div>
-                                {{-- <div class="col-lg-12">
-                                    <div class="contacts-icon contactss-doctor">
-                                        <input name="doctor" type="text" placeholder="Nama Dokter"
-                                            value="Psikolog Nadjilah Fatin" readonly style="font-size: 14px" />
-                                    </div>
-                                </div> --}}
-
                                 <div class="col-lg-12">
                                     <div class="contacts-icon contactss-address">
                                         <input name="alamat" type="text" placeholder="Masukkan Alamat" />
@@ -86,47 +78,43 @@
                                 </div>
                             </div>
                         </form>
-
-                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
-     
+    {{-- Data Konsultasi --}}
     <div class="row justify-content-center">
-                <div class="col-xl-6 col-lg-6">
-                    <div class="section-title text-center mb-60">
-                        <span>
-                            <i class="far fa-plus"></i> Data Konsultasi
-                            <i class="far fa-plus pl-10"></i>
-                            <br>
-                        </span>
-                       <h2 style="font-size: 24px; font-family:'Poppins',sans-serif;">Cek Data Anda Apabila Sudah Mendaftar Konsultasi</h2>
-                       <br>
-                       <div class="app-item">
-                                <ul>
-                                    <li>
-                                        <div class="app-text">
-                                            <h4>Senin - Jum'at</h4>
-                                            <span>9:00 - 20:00</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="app-text">
-                                            <h4>Sabtu &amp; Minggu</h4>
-                                            <span>10:00 - 19:00</span>
-                                        </div>
-                                    </li>
-                                </ul>
+        <div class="col-xl-6 col-lg-6">
+            <div class="section-title text-center mb-60">
+                <span>
+                    <i class="far fa-plus"></i> Data Konsultasi
+                     <i class="far fa-plus pl-10"></i>
+                </span>
+                <br>
+                <h2 style="font-size: 24px; font-family:'Poppins',sans-serif;">Cek Data Anda Apabila Sudah Mendaftar Konsultasi</h2>
+                <br>
+                <div class="app-item">
+                    <ul>
+                        <li>
+                            <div class="app-text">
+                                <h4>Senin - Jum'at</h4>
+                                    <span>9:00 - 20:00</span>
                             </div>
-                    </div>
-                    
-                     <li>
-                            <a href="/konfirm" class="c-btn" style="margin-bottom: 30px;">Lihat Data Konsultasi</a>
                         </li>
+                        <li>
+                            <div class="app-text">
+                                <h4>Sabtu &amp; Minggu</h4>
+                                <span>10:00 - 19:00</span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-                       
+            <li>
+                <a href="/konfirm" class="c-btn" style="margin-bottom: 30px;">Lihat Data Konsultasi</a>
+            </li>
+        </div>
+    </div>               
 </main>
 @endsection

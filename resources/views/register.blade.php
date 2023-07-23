@@ -1,7 +1,5 @@
 @extends('layouts/main')
-
 @section('container')
-
 <body>
     <main>
         <form action="/registeruser" method="post" class="form-login">

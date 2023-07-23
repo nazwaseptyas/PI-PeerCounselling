@@ -17,36 +17,26 @@ use App\Http\Controllers\KonsultasiController;
 |
 */
 
+// Routes Home
 Route::get('/', function () {
     return view('home');
 });
+// Routes About
 Route::get('/about', function () {
     return view('about');
 });
+// Routes Konsultasi
 Route::get('/konsultasi', function () {
     return view('konsultasi');
 });
-// Route::get('/artikel', function () {
-//     return view('artikel');
-// });
-// Route::get('/detail', function () {
-//     return view('detail');
-// });
-
-Route::get('/artikel', [ArtikelController::class, 'indexxx']);
-
-
+// Routes Kontak
 Route::get('/kontak', function () {
     return view('kontak');
 });
-
+// Routes Admin
 Route::get('/admin', function () {
     return view('admin');
 });
-Route::get('/tabelartikel', function () {
-    return view('tabelartikel');
-});
-
 
 //Routes Login, Register, dan Logout
 Route::get('/register', [LoginController::class, 'register'])->name('register');
@@ -57,6 +47,7 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 // Routes Artikel
+Route::get('/artikel', [ArtikelController::class, 'indexxx']);
 Route::get('/tabelartikel', [ArtikelController::class, 'indexxxx'])->name('tabelartikel');
 Route::get('/tambahartikel', [ArtikelController::class, 'tambahArtikel'])->name('tambahartikel');
 Route::post('/simpanartikel', [ArtikelController::class, 'simpanArtikel'])->name('simpanartikel');

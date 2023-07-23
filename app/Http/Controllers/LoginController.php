@@ -33,9 +33,12 @@ class LoginController extends Controller
         return redirect('login')->withErrors('Username dan password yang dimasukkan tidak sesuai')->withInput();
     }
     }
-    public function register(){
+
+    public function register()
+    {
         return view('register');
     }
+
     public function registeruser(Request $request){
         User::create([
             'name' => $request->name,
@@ -45,6 +48,7 @@ class LoginController extends Controller
         ]);
         return redirect('/login');
     }
+    
     public function logout(){
         Auth::logout();
         return redirect('login');

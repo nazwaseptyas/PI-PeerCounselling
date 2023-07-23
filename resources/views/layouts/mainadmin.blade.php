@@ -1,29 +1,20 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <title>Yuk Cerita</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-    <meta content="Themesbrand" name="author" />
-    <!-- App favicon -->
     <link rel="shortcut icon" href="/assets/img/logo/logoyukcerita.png">
-    <!-- Bootstrap Css -->
     <link href="assets2/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
-    <!-- Icons Css -->
     <link href="assets2/css/icons.min.css" rel="stylesheet" type="text/css" />
-    <!-- App Css-->
     <link href="assets2/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 </head>
-
-
 <body>
     <div id="layout-wrapper">
         <header id="page-topbar">
             <div class="navbar-header">
+                {{-- Logo --}}
                 <div class="d-flex">
-                    <!-- LOGO -->
                     <div class="navbar-brand-box">
                         <a href="/admin" class="logo logo-dark">
                             <span class="logo-sm">
@@ -39,7 +30,7 @@
                         <i class="fa fa-fw fa-bars"></i>
                     </button>
                 </div>
-
+                {{-- Navbar --}}
                 <div class="d-flex">
                     <div class="dropdown d-inline-block">
                         <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
@@ -50,10 +41,9 @@
                             <i class="uil-angle-down d-none d-xl-inline-block font-size-15"></i>
                         </button>
                         <div class="dropdown-menu dropdown-menu-end">
-                            <!-- item-->
                             <a class="dropdown-item" href="/logout"><i
-                                    class="uil uil-sign-out-alt font-size-18 align-middle me-1 text-muted"></i> <span
-                                    class="align-middle">Keluar</span></a>
+                            class="uil uil-sign-out-alt font-size-18 align-middle me-1 text-muted"></i> 
+                            <span class="align-middle">Keluar</span></a>
                         </div>
                     </div>
                     <div class="dropdown d-inline-block">
@@ -64,9 +54,9 @@
                 </div>
             </div>
         </header>
-        <!-- ========== Left Sidebar Start ========== -->
+        {{-- Left Navbar --}}
         <div class="vertical-menu">
-            <!-- LOGO -->
+            {{-- Logo --}}
             <div class="navbar-brand-box">
                 <a href="/admin" class="logo logo-dark">
                     <span class="logo-sm">
@@ -81,8 +71,7 @@
                 <i class="fa fa-fw fa-bars"></i>
             </button>
             <div data-simplebar class="sidebar-menu-scroll">
-
-                <!--- Sidemenu -->
+                {{-- Menu Navbar --}}
                 <div id="sidebar-menu">
                     <!-- Left Menu Start -->
                     <ul class="metismenu list-unstyled" id="side-menu">
@@ -108,13 +97,13 @@
                         </li>
                     </ul>
                 </div>
-                <!-- Sidebar -->
             </div>
         </div>
-        <!-- Left Sidebar End -->
+        {{-- Main Content --}}
         <div class="main-content">
             <main>@yield('container')</main>
         </div>
+        {{-- Footer --}}
         <footer class="footer">
             <div class="container-fluid">
                 <div class="row">
@@ -126,31 +115,10 @@
             </div>
         </footer>
     </div>
-    <!-- end main content-->
-    </div>
-    <!-- END layout-wrapper -->
-
-
-    <!-- Right bar overlay-->
-    <div class="rightbar-overlay"></div>
-
-    <!-- JAVASCRIPT -->
     <script src="assets2/libs/jquery/jquery.min.js"></script>
     <script src="assets2/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets2/libs/metismenu/metisMenu.min.js"></script>
     <script src="assets2/libs/simplebar/simplebar.min.js"></script>
-    <script src="assets2/libs/node-waves/waves.min.js"></script>
-    <script src="assets2/libs/waypoints/lib/jquery.waypoints.min.js"></script>
-    <script src="assets2/libs/jquery.counterup/jquery.counterup.min.js"></script>
-
-    <!-- apexcharts -->
-    <script src="assets2/libs/apexcharts/apexcharts.min.js"></script>
-
-    <script src="assets2/js/pages/dashboard.init.js"></script>
-
-    <!-- App js -->
     <script src="assets2/js/app.js"></script>
-
 </body>
-
 </html>

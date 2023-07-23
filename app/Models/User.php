@@ -46,8 +46,8 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
     public function konsultasis(): HasMany
-{
+    {
     return $this->hasMany(Konsultasi::class, 'id', 'id');
-}
+    }
 
 }

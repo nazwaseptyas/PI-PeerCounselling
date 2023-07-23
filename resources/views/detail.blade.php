@@ -1,9 +1,8 @@
 @extends('layouts/main')
-
 @section('container')
-
 <body>
     <main>
+        {{-- Detail Artikel --}}
         <div class="blog-area pt-120 pb-90">
             <div class="container">
                 <div class="row">
@@ -32,6 +31,7 @@
                             </div>
                         </div>
                     </div>
+                    {{-- Cari Artikel --}}
                     <div class="col-xl-4 col-lg-4 mb-30">
                         <div class="widget mb-40">
                              <form action="{{ route('search') }}" method="GET" class="search-form">
@@ -39,12 +39,10 @@
                             <button type="submit" class="c-btn" style="height:40px; width: 30px; margin-right:10px;"><i class="fas fa-search"></i></button>
                         </form>
                         </div>
-                        
                     </div>
                 </div>
             </div>
         </div>
-
     </main>
 </body>
 @endsection

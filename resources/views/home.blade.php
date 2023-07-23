@@ -1,20 +1,9 @@
 @extends('layouts/main')
-
 @section('container')
-
 <body>
     <main>
+        {{-- Hero - Home --}}
         <section class="hero-area pos-rel mr-30 ml-30">
-            <div class="slider-icon d-none d-xl-block">
-                <a href="/kontak">
-                    <i class="fal fa-comments"></i>
-                </a>
-            </div>
-            <div class="slider-side d-none d-xl-block">
-                <a href="/konsultasi" class="c-btn">
-                    <span></span> Gratis Konsultasi
-                </a>
-            </div>
             <div class="hero-slider" style="background-image: url('/assets/img/slider/peercounseling.png');">
                 <div class="slider-active">
                     <div class="single-slider slider-height d-flex align-items-center">
@@ -49,8 +38,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- number-area-start -->
+        {{-- Peer counseling --}}
         <div class="number-area pb-70">
             <div class="container">
                 <div class="row">
@@ -69,17 +57,14 @@
                 </div>
             </div>
         </div>
-
-        <!-- faq-area-end -->
-        <div class="row">
+        {{-- Why --}}
+        <div class="row" style="margin-bottom: 50px;">
             <div class="col-12">
                 <div class="section-title text-center mb-60">
                     <span>Kenapa harus di Yuk Cerita? </span>
                 </div>
             </div>
         </div>
-        <br />
-        <br />
         <div class="feature-area feature-area-top pb-90">
             <div class="container">
                 <div class="row">
@@ -172,6 +157,7 @@
         <br />
         <br />
         <br />
+        {{-- Banner --}}
         <div class="cta-area pb-110 pt-120" style="background-image: url('assets/img/bg/mhs1.jpeg')">
             <div class="container">
                 <div class="row no-gutters">
@@ -187,7 +173,8 @@
                 </div>
             </div>
         </div>
-        <div class="cta-area pb-110 pt-120">
+        {{-- Masalah Kesehatan Mental --}}
+        <div class="cta-area pb-110 pt-120" style="margin-bottom: 50px;">
             <div class="row">
                 <div class="col-12">
                     <div class="section-title text-center mb-60">
@@ -199,8 +186,7 @@
                 <img src="assets/img/bg/mental.jpg" alt="Background" style="width: 600px" />
             </div>
         </div>
-        <br>
-        <br>
+        {{-- Peer Counselling --}}
         <div class="tab-area pb-90">
             <div class="container">
                 <div class="row">

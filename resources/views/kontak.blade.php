@@ -1,23 +1,22 @@
 @extends('layouts/main')
-
 @section('container')
-
 <body>
     <main>
+        {{-- BreadCrumb --}}
         <div class="breadcrumb-area pt-150 pb-150" data-overlay="7"
             style="background-image: url(assets/img/bg/kontak.jpeg);">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="breadcrumb-text text-center z-index">
-                            <h1>contact</h1>
+                            <h1>Kontak</h1>
                             <ul class="breadcrumb-menu">
                                 <li>
                                     <a href="/">Home</a>
                                 </li>
                                 <li>
                                     <span>
-                                        <a href="/kontak">Contact</a>
+                                        <a href="/kontak">Kontak</a>
                                     </span>
                                 </li>
                             </ul>
@@ -26,7 +25,7 @@
                 </div>
             </div>
         </div>
-
+        {{-- Kontak --}}
         <div class="contact-us-area">
             <div class="container-fluid p-0">
                 <div class="row no-gutters">
@@ -66,7 +65,6 @@
                 </div>
             </div>
         </div>
-
     </main>
 </body>
 @endsection

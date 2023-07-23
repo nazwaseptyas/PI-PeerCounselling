@@ -1,5 +1,4 @@
 @extends('layouts/main')
-
 @section('container')
 <main>
     <div class="contact-us-area pt-120 pb-120">
@@ -13,6 +12,7 @@
                     </div>
                 </div>
             </div>
+            {{-- List Data Konsultasi --}}
             <div class="page-content">
             <div class="container-fluid">
                 <div class="container">
@@ -60,10 +60,7 @@
                     </div>
                 </div>
             </div>
-            
         </div>
-    </div>
-    </main>
-            
+    </div>            
 </main>
 @endsection
