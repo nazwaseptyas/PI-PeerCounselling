@@ -189,7 +189,7 @@
             <span style="margin-left: 10px; font-size: 13px;">
                 Yuk Cerita adalah platform yang fokus pada dukungan dan konseling sebaya. Kami siap membantu Anda dalam
                 mengatasi berbagai masalah dan memberikan dukungan emosional. Untuk situasi darurat dan membutuhkan
-                bantuan segera terkait dengan percobaan bunuh diri, harap hubungi layanan profesional yang bisa
+                bantuan segera terkait dengan percobaan bunuh diri dan bullying, harap hubungi layanan profesional yang bisa
                 dijangkau segera yang tersedia di wilayah anda.
             </span>
         </div>
