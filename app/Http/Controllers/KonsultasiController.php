@@ -61,6 +61,13 @@ class KonsultasiController extends Controller
         $data = Konsultasi::find($id);
         return view('tampildata', compact('data'));
     }
+    public function updatedata(Request $request, $id){
+        $data = Konsultasi::find($id);
+        $data->update($request->all());
+        return redirect()->route('tabelkonsultasi')->with('success','Data berhasil di update');
+    
+    }
+
      public function delete($id){
         $data = Konsultasi::find($id);
         $data->delete();
@@ -77,15 +84,16 @@ class KonsultasiController extends Controller
           Konsultasi::create($request->all());
           return redirect()->route('konfirm')->with('success','Data berhasil di Tambahkan');
         }
-public function searchcon(Request $request)
-    {
-        $q = $request->input('q');
-        $data = Konsultasi::where('nama', 'LIKE', '%' . $q . '%')
-            ->orWhere('tanggal', 'LIKE', '%' . $q . '%')
-            ->orderBy('created_at', 'desc')
-            ->get();
+    public function searchcon(Request $request)
+        {
+            $q = $request->input('q');
+            $data = Konsultasi::where('nama', 'LIKE', '%' . $q . '%')
+                ->orWhere('tanggal', 'LIKE', '%' . $q . '%')
+                ->orderBy('created_at', 'desc')
+                ->get();
 
-        return view('searchcon', compact('data'));
-    }
+            return view('searchcon', compact('data'));
+        }
 
+    
 }
