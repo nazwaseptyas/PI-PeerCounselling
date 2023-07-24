@@ -15,7 +15,7 @@
                         <div class="sycho-tab-content pt-40 pr-0 mb-30">
                             <div class="section-title mb-40">
                                 <span>Tentang Kami</span>
-                                <p class="tab-quote">Embrace Extraordinary &amp; Beautiful Solutions for Inner Growth
+                                <p class="tab-quote">Pelajari Solusi Luar Biasa & Indah untuk Pertumbuhan Dalam Diri
                                 </p>
                                 <p>
                                     YukCerita adalah platform konseling sebaya yang membantu mahasiswa mengatasi masalah
@@ -40,7 +40,7 @@
                 <div class="row">
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="about-img pos-rel mb-30">
-                            <img src="assets/img/about/drjara.jpg" alt="" />
+                            <img src="assets/img/about/fatin.jpeg" alt="konselor" style="width: 300px; height: 500px;"/>
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-4 col-md-6">
@@ -88,13 +88,13 @@
                                     <li>
                                         <div class="app-text">
                                             <h4>Senin - Jum'at</h4>
-                                            <span>9:00 - 20:00</span>
+                                            <span>9:00 - 17:00</span>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="app-text">
                                             <h4>Sabtu &amp; Minggu</h4>
-                                            <span>10:00 - 19:00</span>
+                                            <span>10:00 - 16:00</span>
                                         </div>
                                     </li>
                                 </ul>

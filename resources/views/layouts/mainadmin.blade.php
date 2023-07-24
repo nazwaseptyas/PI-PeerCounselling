@@ -76,11 +76,11 @@
                     <!-- Left Menu Start -->
                     <ul class="metismenu list-unstyled" id="side-menu">
                         
-                        <li class="menu-title">Dashboard Admin</li>
+                        <li class="menu-title">Beranda Admin</li>
                         <li>
                             <a href="/admin">
                                 <i class="uil-home-alt"></i>
-                                <span>Home</span>
+                                <span>Beranda</span>
                             </a>
                         </li>
                         <li>

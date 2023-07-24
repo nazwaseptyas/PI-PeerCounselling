@@ -41,7 +41,8 @@
                         <label for="keluhan" class="form-label">Keluhan</label>
                         <textarea name="keluhan" class="form-control" rows="6">{{ $data->keluhan }}</textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="margin-bottom: 50px;">Edit</button>
+                    <button type="submit" class="btn btn-primary" style="margin-bottom: 50px; border:none; margin-right:10px;">Edit</button>
+                    <a href="/tabelkonsultasi" class="btn btn-primary" style="margin-bottom: 50px; border:none; background-color:red;">Batal</a>
                 </form> 
             </div>
         </div>

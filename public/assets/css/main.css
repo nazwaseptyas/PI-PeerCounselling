@@ -7185,6 +7185,10 @@ ul.cat li a:hover {
     color: #251e5e;
 }
 
+.footer-style {
+    background-color: #fcfcfc;
+}
+
 .footer-style .footer-top-text h5 {
     color: #251e5e;
 }

@@ -99,13 +99,13 @@
                         <li>
                             <div class="app-text">
                                 <h4>Senin - Jum'at</h4>
-                                    <span>9:00 - 20:00</span>
+                                    <span>9:00 - 17:00</span>
                             </div>
                         </li>
                         <li>
                             <div class="app-text">
                                 <h4>Sabtu &amp; Minggu</h4>
-                                <span>10:00 - 19:00</span>
+                                <span>10:00 - 16:00</span>
                             </div>
                         </li>
                     </ul>

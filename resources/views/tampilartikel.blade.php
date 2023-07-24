@@ -42,7 +42,8 @@
                         <label class="form-label">Gambar Saat Ini</label>
                         <img src="{{ asset('storage/' . $data->gambar) }}" alt="{{ $data->judul }}" style="max-width: 100px;">
                     </div>
-                    <button type="submit" class="btn btn-primary" style="margin-bottom: 50px;">Edit</button>
+                    <button type="submit" class="btn btn-primary" style="margin-bottom: 50px; border:none; margin-right:10px;">Edit</button>
+                    <a href="/tabelartikel" class="btn btn-primary" style="margin-bottom: 50px; border:none; background-color:red;">Batal</a>
                 </form> 
             </div>
         </div>

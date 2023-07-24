@@ -60,14 +60,14 @@ class KonsultasiController extends Controller
     public function updatedata(Request $request, $id){
         $data = Konsultasi::find($id);
         $data->update($request->all());
-        return redirect()->route('tabelkonsultasi')->with('success','Data berhasil di update');
+        return redirect()->route('tabelkonsultasi')->with('success','Data berhasil di perbaharui');
     
     }
 
      public function delete($id){
         $data = Konsultasi::find($id);
         $data->delete();
-        return redirect()->route('tabelkonsultasi')->with('success','Data berhasil di delete');
+        return redirect()->route('tabelkonsultasi')->with('success','Data berhasil di hapus');
     }
 
     public function indexz()

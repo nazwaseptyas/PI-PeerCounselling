@@ -12,6 +12,7 @@
                     </div>
                     @endif
                     <a href="{{ route('tambahartikel') }}" class="btn btn-primary mb-3">Tambah Artikel</a>
+                    <div class="table-responsive">
                     <table class="table">
                         <thead>
                             <tr>
@@ -52,6 +53,7 @@
                             @endforeach
                         </tbody>
                     </table>
+                </div>
                 </div>
             </div>
         </div>

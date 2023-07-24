@@ -13,7 +13,7 @@
                                     <div class="hero-content">
                                         <div class="slider-caption ">
                                             <span data-animation="fadeInUp" data-delay=".2s">
-                                                Mind Care & Stay Happy
+                                                Pengelolaan Pikiran & Tetap Bahagia
                                             </span>
                                             <h2 data-animation="fadeInUp" data-delay=".4s">
                                                 Yuk Cerita
@@ -203,7 +203,7 @@
                                         <div class="section-title mb-40">
                                             <span>Peer Counselling</span>
                                             <p class="tab-quote">
-                                                Experience the Magic of Beautiful Solutions through Peer Counseling
+                                                Rasakan Keajaiban Solusi Indah melalui Peer Counseling
                                             </p>
                                             <p style="font-family: Poppins">
                                                 Bimbingan konseling teman sebaya atau peer counselor merupakan suatu
@@ -220,7 +220,7 @@
                                                 yang sangat bermakna bagi mahasiswa, karena para mahasiswa berdasarkan
                                                 tingkat perkembangannya adalah individu-individu yang sedang menjalani
                                                 usia
-                                                remaja akhir
+                                                remaja akhir.
                                             </p>
                                             <div class="mb-50"></div>
                                             <a href="/konsultasi" class="c-btn" style="color: #ffffff">

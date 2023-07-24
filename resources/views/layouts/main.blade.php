@@ -80,9 +80,7 @@
                         </div>
                     </div>
                     @endif
-                    
                 </div>
-                
             </div>
     </header>
     {{-- Main Content --}}
@@ -178,8 +176,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div
+            <div
             style="margin: 20px; padding: 20px; background-color: #FF9F9F; border-radius: 18px; display: flex; justify-content: space-between;">
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="exclamation-circle"
                 class="svg-inline--fa fa-exclamation-circle fa-3x section5-fa" role="img"
@@ -195,10 +192,7 @@
                 dijangkau segera yang tersedia di wilayah anda.
             </span>
         </div>
-
-        <br>
-        <br>
-        <br>
+        </div>
         <div class="footer-botm-area pt-25 pb-25">
             <div class="container">
                 <div class="row">
@@ -212,8 +206,8 @@
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-6">
                         <div class="footer-btom-icon text-md-right">
-                            <a href="/">
-                                <i class="fab fa-facebook-f"></i>
+                            <a href="https://api.whatsapp.com/send?phone=6287771030559" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
                             </a>
                             <a href="https://twitter.com/nzwasalsa_">
                                 <i class="fab fa-twitter"></i>
