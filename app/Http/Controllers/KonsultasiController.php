@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Log;
+use App\Models\User;
 use App\Models\Konsultasi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -14,6 +14,12 @@ class KonsultasiController extends Controller
     {
         $data = Konsultasi::all();
         return view('tabelkonsultasi', compact('data'));
+    }
+
+     public function indexxk()
+    {
+        $data = Konsultasi::all();
+        return view('konfirm', compact('data'));
     }
 
     public function index()
@@ -28,68 +34,57 @@ class KonsultasiController extends Controller
         return view('konsultasi');
     }
 
-    public function createdata(Request $request)
+    public function konfirm(Request $request)
     {
+        $data = Konsultasi::where('email_konsultasi',Auth::user()->email)->get();
+
+        return view('konfirm', compact('data'));
+    }
+
+   public function createdata(Request $request)
+    {
+        if (!Auth::check()) {
+        return redirect()->route('login'); 
+        }
+
         $request->validate([
             'nama' => 'required',
-            'email' => 'required|email',
+            'email_konsultasi' => 'required|email',
             'alamat' => 'required',
             'tanggal' => 'required|date',
             'nohp' => 'required',
             'keluhan' => 'required',
         ]);
 
-        Konsultasi::create([
+        Auth::user()->konsultasis()->create([
             'nama' => $request->nama,
-            'email' => $request->email,
+            'email_konsultasi' => $request->email_konsultasi,
             'alamat' => $request->alamat,
             'tanggal' => $request->tanggal,
             'nohp' => $request->nohp,
             'keluhan' => $request->keluhan,
         ]);
-                
+
         return redirect()->route('konsultasi')->with('success', 'Data berhasil ditambahkan');
     }
 
-    public function tampilkandata($id)
+    public function tampilkandata($id_konsultasis)
     {
-        $data = Konsultasi::find($id);
+        $data = Konsultasi::find($id_konsultasis);
         return view('tampildata', compact('data'));
     }
 
-    public function updatedata(Request $request, $id){
-        $data = Konsultasi::find($id);
+    public function updatedata(Request $request, $id_konsultasis){
+        $data = Konsultasi::find($id_konsultasis);
         $data->update($request->all());
         return redirect()->route('tabelkonsultasi')->with('success','Data berhasil di perbaharui');
     
     }
 
-     public function delete($id){
-        $data = Konsultasi::find($id);
+     public function delete($id_konsultasis){
+        $data = Konsultasi::find($id_konsultasis);
         $data->delete();
         return redirect()->route('tabelkonsultasi')->with('success','Data berhasil di hapus');
-    }
-
-    public function indexz()
-    {
-        $data = Konsultasi::all();
-        return view('konfirm', compact('data'));
-    }
-    public function confrimdata(Request $request)
-    {
-        Konsultasi::create($request->all());
-        return redirect()->route('konfirm')->with('success','Data berhasil di Tambahkan');
-    }
-
-    public function searchcon(Request $request)
-    {
-        $q = $request->input('q');
-        $data = Konsultasi::where('nama', 'LIKE', '%' . $q . '%')
-                ->orWhere('tanggal', 'LIKE', '%' . $q . '%')
-                ->orderBy('created_at', 'desc')
-                ->get();
-
-        return view('searchcon', compact('data'));
     }
     
 }

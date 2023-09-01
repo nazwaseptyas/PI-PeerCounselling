@@ -12,13 +12,16 @@ class CreateArtikelTable extends Migration
     public function up(): void
     {
         Schema::create('artikel', function (Blueprint $table) {
-            $table->id();
-            $table->string('judul');
-            $table->string('penulis');
+            $table->id('id_artikel');
+            $table->unsignedBigInteger('user_id');
+            $table->string('judul', 150);
+            $table->string('penulis', 30);
             $table->text('isi');
-            $table->date('tanggal');
+            $table->date('tgl_artikel');
             $table->string('gambar');
             $table->timestamps();
+            $table->softDeletes();
+            $table->foreign('user_id')->references('id_users')->on('users');
         });
     }
 

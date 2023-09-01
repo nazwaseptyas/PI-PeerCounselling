@@ -12,7 +12,7 @@ class CreateKonsultasiTable extends Migration
      */
     public function up(): void
     {
-        Schema::create('konsultasis', function (Blueprint $table) {
+        Schema::create('konsultasi', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
             $table->string('email');
@@ -21,7 +21,9 @@ class CreateKonsultasiTable extends Migration
             $table->string('nohp');
             $table->string('keluhan');
             $table->timestamps();
+           
         });
+
     }
 
     /**
@@ -29,6 +31,6 @@ class CreateKonsultasiTable extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('konsultasis');
+        Schema::dropIfExists('konsultasi');
     }
 };

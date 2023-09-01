@@ -12,10 +12,11 @@ class LoginController extends Controller
     public function login(){
         return view('login');
     }
-    public function loginuser(Request $request){
-        $request->validate([
+    public function loginuser(Request $request)
+{
+    $request->validate([
         'email' => 'required',
-        'password' => 'required'
+        'password' => 'required',
     ], [
         'email.required' => 'Email wajib diisi',
         'password.required' => 'Password wajib diisi',
@@ -23,7 +24,7 @@ class LoginController extends Controller
 
     $credentials = $request->only('email', 'password');
 
-    if (Auth::attempt($credentials)) {
+    if (Auth::attempt($credentials, $request->remember)) {
         if (Auth::user()->role === 'admin') {
             return redirect('/admin');
         } else {
@@ -32,7 +33,8 @@ class LoginController extends Controller
     } else {
         return redirect('login')->withErrors('Username dan password yang dimasukkan tidak sesuai')->withInput();
     }
-    }
+}
+
 
     public function register()
     {

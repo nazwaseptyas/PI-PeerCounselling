@@ -47,7 +47,9 @@ class User extends Authenticatable
     ];
     public function konsultasis(): HasMany
     {
-    return $this->hasMany(Konsultasi::class, 'id', 'id');
+    return $this->hasMany(Konsultasi::class, 'user_id', 'id_users');
     }
 
+    protected $primaryKey = 'id_users';
+    public $incrementing = false;
 }

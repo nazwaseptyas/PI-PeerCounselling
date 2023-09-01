@@ -13,14 +13,17 @@ class CreateKonsultasisTable extends Migration
     public function up(): void
     {
         Schema::create('konsultasis', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama');
-            $table->string('email');
-            $table->string('alamat');
+            $table->id('id_konsultasis');
+            $table->unsignedBigInteger('user_id');
+            $table->string('nama', 30);
+            $table->string('email_konsultasi', 30);
+            $table->string('alamat', 50);
             $table->date('tanggal');
-            $table->string('nohp');
-            $table->string('keluhan');
+            $table->bigInteger('nohp');
+            $table->text('keluhan');
             $table->timestamps();
+            $table->softDeletes();
+            $table->foreign('user_id')->references('id_users')->on('users');
         });
     }
 

@@ -15,7 +15,7 @@
         <div class="container-fluid">
             <div class="container">
                 <h2 style="font-size: 36px; font-weight:bolder; margin-top: 50px; text-align:center;">Edit Data Konsultasi</h2>
-                <form action="{{ route('updatedata', ['id' => $data->id]) }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('updatedata', ['id' => $data->id_konsultasis]) }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Nama</label>
@@ -23,7 +23,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Email</label>
-                        <input type="email" name="email" value="{{ $data->email }}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="email" name="email" value="{{ $data->email_konsultasi }}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                      <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Tanggal</label>

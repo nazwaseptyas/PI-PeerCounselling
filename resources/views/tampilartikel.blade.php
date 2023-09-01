@@ -15,7 +15,7 @@
         <div class="container-fluid">
             <div class="container">
                 <h2 style="font-size: 36px; font-weight:bolder; margin-top: 50px; text-align:center;">Edit Artikel</h2>
-                <form action="{{ route('updateartikel', ['id' => $data->id]) }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('updateartikel', ['id' => $data->id_artikel]) }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Judul</label>
@@ -27,7 +27,7 @@
                     </div>
                      <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Tanggal</label>
-                        <input type="date" name="tanggal" value="{{ $data->tanggal }}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="date" name="tgl_artikel" value="{{ $data->tgl_artikel }}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
                         <label for="keluhan" class="form-label">Isi Artikel</label>

@@ -17,7 +17,7 @@
                     </div>
                     <div class="form-group">
                         <label for="tanggal">Tanggal</label>
-                        <input type="date" class="form-control" id="tanggal" name="tanggal" required>
+                        <input type="date" class="form-control" id="tanggal" name="tgl_artikel" required>
                     </div>
                     <div class="form-group">
                         <label for="isi">Isi Artikel</label>

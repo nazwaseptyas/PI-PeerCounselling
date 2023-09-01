@@ -2,17 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Artikel;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
-use App\Models\User;
 
 class ArtikelController extends Controller
 {
-    public function indexxx()
+
+    public function __construct()
     {
-        $data = Artikel::paginate(3);
+        $this->middleware('auth')->except(['indexxx', 'detail', 'search', 'tampilkanartikel']);
+    }
+    
+     public function indexxx()
+    {
+        $data = Artikel::orderBy('tgl_artikel', 'desc')->paginate(3);
         return view('artikel', compact('data'));
     }
 
@@ -33,7 +39,7 @@ class ArtikelController extends Controller
         $request->validate([
             'judul' => 'required',
             'penulis' => 'required',
-            'tanggal' => 'required|date',
+            'tgl_artikel' => 'required|date',
             'isi' => 'required',
             'gambar' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
@@ -41,10 +47,13 @@ class ArtikelController extends Controller
         // Simpan gambar ke direktori /public/images
         $gambar = $request->file('gambar')->store('images', 'public');
 
+        $user = User::where('email', 'admin@gmail.com')->first();
+
         Artikel::create([
+            'user_id' => $user->id_users, // Simpan user_id dari pengguna yang sedang login
             'judul' => $request->judul,
             'penulis' => $request->penulis,
-            'tanggal' => $request->tanggal,
+            'tgl_artikel' => $request->tgl_artikel,
             'isi' => $request->isi,
             'gambar' => $gambar,
         ]);
@@ -52,15 +61,15 @@ class ArtikelController extends Controller
         return redirect()->route('tabelartikel')->with('success', 'Artikel berhasil ditambahkan');
     }
 
-    public function detail($id)
+    public function detail($id_artikel)
     {
-        $data = Artikel::find($id);
+        $data = Artikel::find($id_artikel);
         return view('detail', compact('data'));
     }
 
-    public function delete($id)
+    public function delete($id_artikel)
     {
-        $data = Artikel::find($id);
+        $data = Artikel::find($id_artikel);
         $data->delete();
         return redirect()->route('tabelartikel')->with('success', 'Artikel berhasil dihapus');
     }
@@ -70,7 +79,9 @@ class ArtikelController extends Controller
     $keyword = $request->input('q');
 
     // Lakukan pencarian berdasarkan judul artikel
-    $data = Artikel::where('judul', 'LIKE', '%' . $keyword . '%')->get();
+    $data = Artikel::where('judul', 'LIKE', '%' . $keyword . '%')
+                   ->orderBy('tanggal', 'desc')
+                   ->get();
 
     // Debugging untuk memastikan data hasil pencarian
     // dd($data);
@@ -78,20 +89,20 @@ class ArtikelController extends Controller
     return view('search', compact('data', 'keyword'));
 }
 
-    public function tampilkanartikel($id)
+    public function tampilkanartikel($id_artikel)
     {
-        $data = Artikel::find($id);
+        $data = Artikel::find($id_artikel);
         return view('tampilartikel', compact('data'));
     }
     
-    public function updateArtikel(Request $request, $id)
+    public function updateArtikel(Request $request, $id_artikel)
     {
-        $data = Artikel::find($id);
+        $data = Artikel::find($id_artikel);
 
         $request->validate([
             'judul' => 'required',
             'penulis' => 'required',
-            'tanggal' => 'required|date',
+            'tgl_artikel' => 'required|date',
             'isi' => 'required',
             'gambar' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
@@ -106,10 +117,12 @@ class ArtikelController extends Controller
             $data->gambar = $gambar;
         }
 
+        $user = User::where('email', 'admin@gmail.com')->first();
         $data->update([
+            'user_id' => $user->id_users,
             'judul' => $request->judul,
             'penulis' => $request->penulis,
-            'tanggal' => $request->tanggal,
+            'tgl_artikel' => $request->tgl_artikel,
             'isi' => $request->isi,
         ]);
 

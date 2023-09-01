@@ -32,33 +32,44 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="conatct-address-wrapper theme-gray  mb-30">
                             <div class="contact-address-icon f-left">
-                                <i class="fal fa-phone"></i>
+                                <a href="https://api.whatsapp.com/send?phone=6287771030559&text=Hi%2C%20admin%20YukCerita%21%20Aku%20butuh%20bantuan%2C%20aku%20mau%20bertanya%20mengenai..." target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
                             </div>
                             <div class="contact-address-text fix">
-                                <span>Phone Number</span>
-                                <h3>+62 8777 1030 559</h3>
+                                <span>Nomor Whatsapp</span>
+                                <a href="https://api.whatsapp.com/send?phone=6287771030559&text=Hi%2C%20admin%20YukCerita%21%20Aku%20butuh%20bantuan%2C%20aku%20mau%20bertanya%20mengenai..." target="_blank">
+                                <h3>+62 8777 1030 559</h3></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="conatct-address-wrapper theme-bg mails mb-30">
                             <div class="contact-address-icon f-left">
-                                <i class="fal fa-envelope"></i>
+                                <a href="mailto:nazwaseptyas@gmail.com">
+                                    <i class="fal fa-envelope"></i>
+                                </a>
                             </div>
                             <div class="contact-address-text fix">
-                                <span>Email Address</span>
-                                <h3>nazwaseptyas@gmail.com</h3>
+                                <span>Email</span>
+                                <a href="mailto:nazwaseptyas@gmail.com">
+                                     <h3>nazwaseptyas@gmail.com</h3>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="conatct-address-wrapper red-bg mpas mb-30">
                             <div class="contact-address-icon f-left">
-                                <i class="fal fa-map-marker-alt"></i>
+                                <a href="https://www.google.com/maps?q=Depok,+Jawa+Barat" target="_blank">
+                                    <i class="fal fa-map-marker-alt"></i>
+                                </a>
                             </div>
                             <div class="contact-address-text fix">
-                                <span>Officce Address</span>
-                                <h3>Depok, Jawa Barat</h3>
+                                <span>Alamat</span>
+                                <a href="https://www.google.com/maps?q=Depok,+Jawa+Barat" target="_blank">
+                                   <h3>Depok, Jawa Barat</h3>
+                                </a>
                             </div>
                         </div>
                     </div>

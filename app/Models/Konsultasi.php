@@ -10,15 +10,18 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Konsultasi extends Model
 {
     use HasFactory;
-    protected $fillable = ['nama', 'email', 'alamat', 'tanggal', 'nohp', 'keluhan'];
 
+    protected $fillable = ['nama', 'email_konsultasi', 'alamat', 'tanggal', 'nohp', 'keluhan'];
+
+    protected $primaryKey = 'id_konsultasis';
     public static function createWithSession($data)
     {
         return self::create($data);
     }
-   public function user(): BelongsTo
+
+    public function user(): BelongsTo
     {
-    return $this->belongsTo(User::class, 'id', 'id');
+        return $this->belongsTo(User::class, 'user_id', 'id_users');
     }
 
 }

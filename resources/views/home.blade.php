@@ -13,12 +13,12 @@
                                     <div class="hero-content">
                                         <div class="slider-caption ">
                                             <span data-animation="fadeInUp" data-delay=".2s">
-                                                Pengelolaan Pikiran & Tetap Bahagia
+                                                Tetap sehat & Bahagia
                                             </span>
                                             <h2 data-animation="fadeInUp" data-delay=".4s">
                                                 Yuk Cerita
                                             </h2>
-                                            <p data-animation="fadeInUp" data-delay=".6s">
+                                            <p data-animation="fadeInUp" data-delay=".6s" style="text-align: justify;">
                                                 YukCerita adalah sebuah website konseling sebaya yang ditujukan untuk
                                                 membantu mahasiswa dalam mengatasi masalah pribadi, akademik, dan
                                                 sosial.
@@ -163,7 +163,7 @@
                 <div class="row no-gutters">
                     <div class="col-xl-8 col-lg-8 col-md-8">
                         <div class="section-title section-title-white mr-30 mb-40">
-                            <span class="white-color">
+                            <span class="white-color" style="text-align: justify;">
                                 Jaga kesehatan mentalmu sebagai prioritas utama, Kemudian berikan yang terbaik dalam
                                 setiap
                                 tugas dan tanggung jawabmu.
@@ -205,7 +205,7 @@
                                             <p class="tab-quote">
                                                 Rasakan Keajaiban Solusi Indah melalui Peer Counseling
                                             </p>
-                                            <p style="font-family: Poppins">
+                                            <p style="font-family: Poppins; text-align: justify;">
                                                 Bimbingan konseling teman sebaya atau peer counselor merupakan suatu
                                                 cara
                                                 bagi mahasiswa belajar bagaimana memperhatikan dan membantu mahasiswa

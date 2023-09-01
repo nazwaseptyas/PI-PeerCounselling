@@ -57,17 +57,25 @@ Route::get('/search', [ArtikelController::class, 'search'])->name('search');
 Route::get('/tampilkanartikel/{id}', [ArtikelController::class, 'tampilkanartikel'])->name('tampilkanartikel');
 Route::post('/updateartikel/{id}', [ArtikelController::class, 'updateartikel'])->name('updateartikel');
 
-// Routes Konsultasi
 Route::get('/tabelkonsultasi', [KonsultasiController::class, 'indexx'])->name('tabelkonsultasi');
-Route::get('/delete-consultation/{id}', [KonsultasiController::class, 'delete'])->name('delete-consultation');
+
+// Membuat group middleware untuk rute-rute yang memerlukan auth
 Route::group(['middleware' => ['auth']], function () {
-    // Rute untuk menampilkan form konsultasi
     Route::get('/konsultasi', [KonsultasiController::class, 'konsultasi'])->name('konsultasi');
-    // Rute untuk menyimpan data konsultasi dari form
     Route::post('/createdata', [KonsultasiController::class, 'createdata'])->name('createdata');
+    Route::get('/tampilkandata/{id}', [KonsultasiController::class, 'tampilkandata'])->name('tampilkandata');
+    Route::post('/updatedata/{id}', [KonsultasiController::class, 'updatedata'])->name('updatedata');
 });
-Route::get('/konfirm', [KonsultasiController::class, 'indexz'])->name('konfirm')->middleware('auth');
-Route::post('/confrimdata', [KonsultasiController::class, 'confrimdata'])->name('confrimdata')->middleware('auth');
-Route::get('/searchcon', [KonsultasiController::class, 'searchcon'])->name('searchcon');
-Route::get('/tampilkandata/{id}', [KonsultasiController::class, 'tampilkandata'])->name('tampilkandata');
-Route::post('/updatedata/{id}',[KonsultasiController::class, 'updatedata'])->name('updatedata');
+
+// Rute untuk menghapus data konsultasi
+Route::get('/delete-consultation/{id}', [KonsultasiController::class, 'delete'])->name('delete-consultation');
+
+Route::get('/storage/images/{filename}', function ($filename) {
+    $filePath = storage_path('app/public/images/' . $filename);
+    if (file_exists($filePath)) {
+        return response()->file($filePath);
+    }
+    abort(404);
+});
+
+Route::get('/konfirm',[KonsultasiController::class, 'konfirm'])->name('konfrim');

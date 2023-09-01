@@ -15,30 +15,30 @@
                     @foreach ($data as $row)
                     <div class="blog-wrapper blog-standard mb-50">
                         <div class="blog-img">
-                            <a href="{{ route('detail', $row->id) }}">
-                                <img src="{{ asset('storage/' . $row->gambar) }}" alt="{{ $row->judul }}" />
+                            <a href="{{ route('detail', $row->id_artikel) }}">
+                                <img src="{{ 'storage/' . $row->gambar }}" alt="{{ $row->judul }}" />
                             </a>
                         </div>
                         <div class="blog-text">
-                            <div class="blog-meta">
+                            <div class="blog-meta" style="text-align: justify;">
                                 <span>
                                     <i class="far fa-calendar-alt"></i>
-                                    <a href="{{ route('detail', $row->id) }}">{{ $row->tanggal }}</a>
+                                    <a href="{{ route('detail', $row->id_artikel) }}">{{ $row->tgl_artikel }}</a>
                                 </span>
                                 <span>
                                     <i class="far fa-user"></i>
-                                    <a href="{{ route('detail', $row->id) }}">{{ $row->penulis }}</a>
+                                    <a href="{{ route('detail', $row->id_artikel) }}">{{ $row->penulis }}</a>
                                 </span>
                             </div>
                             <h4>
-                                <a href="{{ route('detail', $row->id) }}">
+                                <a href="{{ route('detail', $row->id_artikel) }}">
                                     {{ $row->judul }}
                                 </a>
                             </h4>
-                            <p>
+                            <p style="text-align: justify;">
                                 {{ \Illuminate\Support\Str::limit($row->isi, 200) }}
                             </p>
-                             <a href="{{ route('detail', $row->id) }}" class="c-btn gray-btn">Selengkapnya</a>
+                             <a href="{{ route('detail', $row->id_artikel) }}" class="c-btn gray-btn">Selengkapnya</a>
                         </div>
                     </div>
                     @endforeach
