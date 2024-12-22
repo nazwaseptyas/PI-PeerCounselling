@@ -47,6 +47,9 @@
                                 <li>
                                     <a href="/artikel">Artikel</a>
                                 </li>
+                                {{-- <li>
+                                    <a href="/video">Video</a>
+                                </li> --}}
                                 <li>
                                     <a href="/kontak">Kontak</a>
                                 </li>
@@ -123,6 +126,9 @@
                                     <li>
                                         <a href="/artikel">Artikel</a>
                                     </li>
+                                    {{-- <li>
+                                        <a href="/video">Video</a>
+                                    </li> --}}
                                     <li>
                                         <a href="/kontak">Kontak</a>
                                     </li>

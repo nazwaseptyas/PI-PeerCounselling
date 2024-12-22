@@ -33,6 +33,7 @@ Route::get('/konsultasi', function () {
 Route::get('/kontak', function () {
     return view('kontak');
 });
+
 // Routes Admin
 Route::get('/admin', function () {
     return view('admin');

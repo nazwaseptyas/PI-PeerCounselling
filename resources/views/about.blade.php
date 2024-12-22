@@ -3,15 +3,15 @@
 <body>
     <main>
         {{-- Hero - About --}}
-        <div class="about-area pt-120 pb-90" style="background-color: #F6FBF4; margin-bottom:150px;">
+        <div class="about-area pt-120 pb-90" style="background-color: #F5F6F8; margin-bottom:150px;">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 col-lg-5">
                         <div class="sycho-tab-img mb-30">
-                            <img src="assets/img/about/aboutcoun.png" alt="" />
+                            <img src="assets/img/about/about1.png" alt="" />
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-7">
+                    <div class="col-xl-6 col-lg-7" style="margin-top: 100px;">
                         <div class="sycho-tab-content pt-40 pr-0 mb-30">
                             <div class="section-title mb-40">
                                 <span>Tentang Kami</span>
@@ -47,7 +47,7 @@
                         <div class="about-11-wrapper mb-30 pl-50 pt-40">
                             <div class="section-title mb-40">
                                 <span>Konselor</span>
-                                <h2>Nadjilah Fatin, S.Psi.</h2>
+                                <h2 style="color: #36b65e">Nadjilah Fatin, S.Psi.</h2>
                                 <div class="mb-40"></div>
                                 <h3>Visi</h3>
                             <p style="text-align: justify;">
@@ -83,7 +83,7 @@
                                 <p class="p-title" style="text-align: justify;">Kami siap untuk mendengarkan dan memberikan solusi terbaik yang
                                     sesuai dengan kebutuhan Anda. Hubungi kami sesuai dengan jadwal yang tertera.</p>
                             </div>
-                            <div class="app-item">
+                            <div class="app-item" style="background-color: #F5F6F8;">
                                 <ul>
                                     <li>
                                         <div class="app-text">
@@ -94,7 +94,7 @@
                                     <li>
                                         <div class="app-text">
                                             <h4>Sabtu &amp; Minggu</h4>
-                                            <span>10:00 - 16:00 WIB</span>
+                                            <span>Tidak ada operasional</span>
                                         </div>
                                     </li>
                                 </ul>

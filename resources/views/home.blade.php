@@ -174,7 +174,7 @@
             </div>
         </div>
         {{-- Masalah Kesehatan Mental --}}
-        <div class="cta-area pb-110 pt-120" style="margin-bottom: 50px;">
+        {{-- <div class="cta-area pb-110 pt-120" style="margin-bottom: 50px;">
             <div class="row">
                 <div class="col-12">
                     <div class="section-title text-center mb-60">
@@ -185,9 +185,9 @@
             <div style="display: flex; justify-content: center; align-items: center;">
                 <img src="assets/img/bg/mental.jpg" alt="Background" style="width: 600px" />
             </div>
-        </div>
+        </div> --}}
         {{-- Peer Counselling --}}
-        <div class="tab-area pb-90">
+        <div class="tab-area pb-90" style="margin-top: 100px;">
             <div class="container">
                 <div class="row">
                     <div class="tab-content mt-120" id="myTabContent">

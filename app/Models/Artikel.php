@@ -11,11 +11,10 @@ class Artikel extends Model
 {
     use HasFactory;
     // Nama tabel yang akan digunakan oleh model Artikel
-    protected $table = 'artikel'; // Tambahkan ini jika nama tabel berbeda
+    protected $table = 'artikel'; 
     protected $fillable = ['user_id','judul', 'penulis', 'tgl_artikel', 'isi', 'gambar'];
 
-    protected $primaryKey = 'id_artikel'; // Tambahkan ini jika nama primary key berbeda
-
+    protected $primaryKey = 'id_artikel'; 
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class, 'user_id', 'id_users');

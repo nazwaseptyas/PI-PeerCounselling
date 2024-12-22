@@ -11,21 +11,21 @@
                     </span>
                     <br>
                     <br>
-                    <div class="app-item">
-                        <ul>
-                            <li>
-                                <div class="app-text">
-                                    <h4>Senin - Jum'at</h4>
-                                        <span>9:00 - 17:00 WIB</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="app-text">
-                                    <h4>Sabtu &amp; Minggu</h4>
-                                    <span>10:00 - 16:00 WIB</span>
-                                </div>
-                            </li>
-                        </ul>
+                    <div class="app-item" style="background-color: #F5F6F8;">
+                                <ul>
+                                    <li>
+                                        <div class="app-text">
+                                            <h4>Senin - Jum'at</h4>
+                                            <span>9:00 - 17:00 WIB</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="app-text">
+                                            <h4>Sabtu &amp; Minggu</h4>
+                                            <span>Tidak ada operasional</span>
+                                        </div>
+                                    </li>
+                                </ul>
                     </div>
                     <div>
                     <h2 style="font-size: 16px; font-family:'Poppins',sans-serif; line-height: 1.5;">Jika sudah mendaftar konsultasi, silakan cek data konsultasi anda sekarang juga dan mulailah konsultasi.&nbsp;<i class="fa-solid fa-hand-sparkles" style="color: #36b65e;"></i></h2><br>
@@ -63,13 +63,13 @@
                         Form Konsultasi Online
                             <br />
                         </span>
-                        <h2 style="font-size: 18px; font-family:'Poppins',sans-serif;line-height: 1.5;">Daftar untuk melakukan konsultasi sesuai dengan tanggal konsultasi yang anda inginkan.</h2>
+                        <h2 style="font-size: 16px; font-family:'Poppins',sans-serif;line-height: 1.5;">Daftar untuk melakukan konsultasi sesuai dengan tanggal konsultasi yang anda inginkan.</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xl-12">
-                    <div class="contacts-us-wrapper theme-green">
+                    <div class="contacts-us-wrapper" style="background-color: #F5F6F8">
                         <form id="contacts-us-form" class="contacts-us-form" action="{{ route('createdata') }}" method="post" enctype="multipart/form-data">
                         <form id="contacts-us-form" class="contacts-us-form" action="/konfirm" method="post" enctype="multipart/form-data">
                         

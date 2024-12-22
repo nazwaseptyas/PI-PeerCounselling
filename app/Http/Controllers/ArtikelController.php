@@ -80,7 +80,7 @@ class ArtikelController extends Controller
 
     // Lakukan pencarian berdasarkan judul artikel
     $data = Artikel::where('judul', 'LIKE', '%' . $keyword . '%')
-                   ->orderBy('tanggal', 'desc')
+                   ->orderBy('tgl_artikel', 'desc')
                    ->get();
 
     // Debugging untuk memastikan data hasil pencarian
